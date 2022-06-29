@@ -13,7 +13,6 @@ export class ExchangeComponent implements OnInit {
   selectedToCurrency: string = 'USD';
   inputValueFrom: number = 0;
   inputValueTo: number = 0;
-  exchangeRate: number = 0;
 
   constructor(private http: HttpClient) {}
 
