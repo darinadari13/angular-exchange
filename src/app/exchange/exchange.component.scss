@@ -1,19 +1,40 @@
 .exchange-container {
   text-align: center;
-  border: 1px solid #e0e1e5;
-  border-radius: 15px;
-  width: 500px;
-  height: 300px;
-  padding: 30px;
-  margin-left: 400px;
-  margin-top: 30px;
+}
 
-  & > input {
-    padding: 10px 10px 10px 10px;
-    margin-bottom: 30px;
-    margin-right: 10px;
+.exchange-container-inner {
+  display: inline-flex;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 50px;
+
+  button,
+  input,
+  select {
+    height: 32px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
     border-radius: 4px;
-    border: 1px solid lightgray;
-    box-shadow: 1px 1px lightcyan;
   }
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+  }
+
+  select {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  button {
+    margin: 0 20px;
+    cursor: pointer;
+  }
+}
+
+.exchange-container-dicider {
+  margin: 20px;
 }

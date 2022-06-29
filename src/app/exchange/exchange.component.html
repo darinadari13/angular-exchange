@@ -1,15 +1,33 @@
 <div class="exchange-container">
-  <input type="text" placeholder="введите сумму..." />
-  <select>
-    <option>UAH</option>
-    <option>USD</option>
-    <option>EUR</option>
-  </select>
-  <br />
-  <input type="text" />
-  <select>
-    <option>UAH</option>
-    <option>USD</option>
-    <option>EUR</option>
-  </select>
+  <div class="exchange-container-inner">
+    <input
+      type="number"
+      [value]="inputValueFrom"
+      (input)="onFromAmountChange($event)"
+    />
+    <select (change)="onFromCurrencyChange($event)">
+      <option
+        *ngFor="let currency of currencies"
+        [value]="currency"
+        [selected]="currency === selectedFromCurrency"
+      >
+        {{ currency }}
+      </option>
+    </select>
+    <div class="exchange-container-dicider"></div>
+    <input
+      type="number"
+      [value]="inputValueTo"
+      (input)="onToAmountChange($event)"
+    />
+    <select (change)="onToCurrencyChange($event)">
+      <option
+        *ngFor="let currency of currencies"
+        [value]="currency"
+        [selected]="currency === selectedToCurrency"
+      >
+        {{ currency }}
+      </option>
+    </select>
+  </div>
 </div>
