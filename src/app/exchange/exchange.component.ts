@@ -63,10 +63,7 @@ export class ExchangeComponent implements OnInit {
   }
 
   convertLeftToRight(from: string, to: string, amount: number): void {
-    console.log(from, to, amount);
-
     if (!from || !to || !amount) {
-      console.log('do nothing');
       return;
     }
 
@@ -80,10 +77,7 @@ export class ExchangeComponent implements OnInit {
   }
 
   convertRightToLeft(from: string, to: string, amount: number): void {
-    console.log(from, to, amount);
-
     if (!from || !to || !amount) {
-      console.log('do nothing');
       return;
     }
 
