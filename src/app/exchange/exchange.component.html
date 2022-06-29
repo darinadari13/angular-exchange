@@ -8,13 +8,12 @@
     <select (change)="onFromCurrencyChange($event)">
       <option
         *ngFor="let currency of currencies"
-        [value]="currency"
         [selected]="currency === selectedFromCurrency"
       >
         {{ currency }}
       </option>
     </select>
-    <div class="exchange-container-dicider"></div>
+    <div class="exchange-container-divider"></div>
     <input
       type="number"
       [value]="inputValueTo"
@@ -23,7 +22,6 @@
     <select (change)="onToCurrencyChange($event)">
       <option
         *ngFor="let currency of currencies"
-        [value]="currency"
         [selected]="currency === selectedToCurrency"
       >
         {{ currency }}
